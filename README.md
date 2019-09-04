@@ -2,8 +2,8 @@
 DMEE Node Path usefull for XML DMEE CGI_XML_CT SEPA_CT
 
 
-![Image1](https://github.com/vidyadharg/DMEE-Node-Path/blob/master/image1.png)
-![Image2](https://github.com/vidyadharg/DMEE-Node-Path/blob/master/image.png)
+![Image1](https://github.com/vidyadharg/DMEE-Node-Path/blob/master/images/image1.png)
+![Image2](https://github.com/vidyadharg/DMEE-Node-Path/blob/master/images/image2.png)
 
 ## CODE :
  Include              LDMEE1_ABACIC
