@@ -21,11 +21,16 @@ DMEE Node Path usefull for XML DMEE CGI_XML_CT SEPA_CT
 ### 2.	METHOD handle_node_cont_men_sel_dmee.
 ```	
 ENHANCEMENT 2  zfiimp_dmee_path.    "active version @END of METHOD
+
+TYPES :
+  ty_string TYPE c LENGTH 5000.
 DATA :
   lv_curr_node TYPE REF TO lcl_dmee_node,
   lv_string    TYPE string,
   lv_rc        TYPE i,
-  lt_string    LIKE STANDARD TABLE OF lv_string.
+  lt_string    TYPE STANDARD TABLE OF ty_string,
+  lw_string    TYPE ty_string.
+  
     CASE fcode.
       WHEN 'ZZDMEEPATH' OR
            'ZZDMEEPATHC'.
@@ -57,7 +62,7 @@ DATA :
         IF lv_string IS NOT INITIAL.
           IF fcode EQ 'ZZDMEEPATHC'.
 
-            APPEND lv_string TO lt_string.
+            lw_string = lv_string. APPEND lw_string TO lt_string.
 
             CALL METHOD cl_gui_frontend_services=>clipboard_export
               IMPORTING
